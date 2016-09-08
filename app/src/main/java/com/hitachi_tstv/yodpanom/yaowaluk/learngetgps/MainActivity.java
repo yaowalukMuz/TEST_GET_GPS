@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Explicit SQLite
-    private StampGPS objStampGPS;
+    private LogGPS objLogGPS;
 
 
     @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }// onCreate
 
     private void connectedSQLite(){
-        objStampGPS = new StampGPS(this);
+        objLogGPS = new LogGPS(this);
     }
 
     public void clickSaveData(View view) {
@@ -76,8 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void updateValueToSQLite( String strLat, String strLng,String strStamp) {
-        objStampGPS.addTransactionGPS(strLat, strLng, strStamp);
-        finish();
+        objLogGPS.addTransactionGPS(strLat, strLng, strStamp);
+       Toast.makeText(this, "Save  Success",Toast.LENGTH_SHORT).show();
 
     }
 
