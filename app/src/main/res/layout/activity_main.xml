@@ -103,5 +103,6 @@
         android:text="Save Data"
         android:id="@+id/button"
         android:singleLine="false"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="clickSaveData" />
 </RelativeLayout>
